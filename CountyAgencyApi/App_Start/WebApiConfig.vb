@@ -15,5 +15,11 @@ Public Module WebApiConfig
             routeTemplate:="api/{controller}/{id}",
             defaults:=New With {.id = RouteParameter.Optional}
         )
+
+        config.Routes.MapHttpRoute(
+            name:="CountyAgency",
+            routeTemplate:="api/{county}/{agency}/{controller}/{id}",
+            defaults:=New With {.id = RouteParameter.Optional}
+        )
     End Sub
 End Module
